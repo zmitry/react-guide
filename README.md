@@ -146,7 +146,8 @@ actions/reducers/selectors/middleware Каждый из этих елемент�
 обязательным для подмодуля. При увеличении размера файла actions (или других
 файлов подмодуля) можно изменить файл
 
-```actions.js -> actions/
+```
+    actions.js -> actions/
                         index.js
                         someGroupOfActions.js
                         someAnotherGroupOfActions.js
