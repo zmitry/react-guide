@@ -6,3 +6,4 @@
 4.  State thoughts [click](https://github.com/zhDmitry/react-guide/blob/master/State.md)
 
 
+
