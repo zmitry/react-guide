@@ -1,7 +1,7 @@
-# Low and High coupling in state management lib
-
+# Low and High coupling in state management lib 
+ 
 ## Определение
-
+ 
 В стейте менеджменте существует несколько сущностей(логически разных елементов)
 
 1.  cигнал который описывает какое-то действие

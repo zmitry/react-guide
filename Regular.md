@@ -3,7 +3,7 @@
 ## Структура проекта
 Пример реального проекта [click](https://github.com/goodmind/treact)
 ```
-    components/
+    components 
         atoms/
             Button/
             Icon/
