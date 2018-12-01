@@ -1,4 +1,4 @@
-# Low and High coupling in state management lib
+# Low and High coupling in state management lib 
  
 ## Определение
  
