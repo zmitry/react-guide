@@ -125,7 +125,9 @@ User interface specific components. This is project internal ui kit.
 The difference between components in lib folder and in ui folder that components in ui folder can define branding styles and use global theme constants unlike components in lib.
 
 guides about atomic structure for ui kit:
+
 http://bradfrost.com/blog/post/atomic-web-design/
+
 https://codeburst.io/atomic-design-with-react-e7aea8152957
 
 ### Testing
