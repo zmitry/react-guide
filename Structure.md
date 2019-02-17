@@ -4,6 +4,45 @@
 
 High level project structure.
 
+```
+api
+types
+modules
+\
+ |- auth
+  \
+   |- atoms
+   |- molecules
+   |- organisms
+   |- pages
+   |- services
+   |- state
+   |- selectors
+ |- users
+ |- todos
+ |- dashboard
+libs
+\
+ |- charts
+ |- table
+ |- validation
+ |- file-upload
+ |- calendar
+ |- pagination
+ui
+\
+ |- atoms
+ |- molecules
+ |- organisms
+ |- pages
+ |- templates
+ |- theme
+// rest of the files for some setup
+App
+index
+setup
+```
+
 ### libs
 
 this folder is supposed to store files without any relation to project
@@ -88,49 +127,6 @@ The difference between components in lib folder and in ui folder that components
 guides about atomic structure for ui kit:
 http://bradfrost.com/blog/post/atomic-web-design/
 https://codeburst.io/atomic-design-with-react-e7aea8152957
-
-### Folder structure summary
-
-in result we could get some structure like this
-
-```
-api
-types
-modules
-\
- |- auth
-  \
-   |- atoms
-   |- molecules
-   |- organisms
-   |- pages
-   |- services
-   |- state
-   |- selectors
- |- users
- |- todos
- |- dashboard
-libs
-\
- |- charts
- |- table
- |- validation
- |- file-upload
- |- calendar
- |- pagination
-ui
-\
- |- atoms
- |- molecules
- |- organisms
- |- pages
- |- templates
- |- theme
-// rest of the files for some setup
-App
-index
-setup
-```
 
 ### Testing
 
