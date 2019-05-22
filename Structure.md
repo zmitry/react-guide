@@ -145,3 +145,18 @@ You tests should fail only if functionality changed but not when you change prop
 Test component functionality but not component implementation.
 
 For libs it's much harder to follow that rule. First of all because you need to test more edge cases and secondly because you need higher code coverage. For libs it makes sense to split functionality in more smaller pieces and test it in isolation. Of course it's in addition to full component api testing.
+### Notes 
+
+#### Nested features
+ Usually you start new features with some name specific for feature or domain you are working on but as your application grows you get more and more code which you want to structure in a proper way with better decomposition. There are a lot of ways to do it, you can do nested features, you can nest you orgnanisms, etc. But all this stuff leads you to bad code structure and bad code discoverability. My recomendations to that is: 
+1) Always search for code which can be moved to libs or components, for instance it can be charts, some complex virtualized lists, some math, data utilities, algorithms. You just can do better decomposition and move some code which isn't related to any domain to libs/components and get free from code overhead in your project. But be careful and don't move code which is tighed to your feature into shared code.
+More examples: this stuff can be something like complex form controls (transfer, selects, suggestions) or general charts (plots, bars, etc).
+2) Another apporoach is to make some parallel feature on the same lvl as main feature for instance
+you have posts and posts gallery component which is quite big and pretty specific to your app, what you can do it's create structure like this
+```
+features/
+ - posts
+ - posts-gallery
+```
+As result you have separate feature but at the same time you can see that it's tighted to main feature. Such approach leads to better code discoverability and easier refactoring. If you refactor posts, you probably will check out how posts-gallery works right now and vice verca. 
+One note for these approach that it's better to do lazy import of nested feature.
