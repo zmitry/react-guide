@@ -29,6 +29,7 @@ Useful graph algorithms
 - [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) Intersting algorithm for finding shortest path with heuristics based on caclucating distance between current point and destination point on each step. This is similar to [Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) but I found it more useful in realworld. 
 
 You can find by links more algorithms, such as network simplex (minimum cost flow), prim, connectivity problems, graph coloring 
+
 - https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/ 
 - https://neo4j.com/developer/graph-algorithms/
 - https://neo4j.com/docs/graph-algorithms/current/
@@ -42,7 +43,8 @@ Probably the most common format for graph representation is dot format it allows
 - https://github.com/anvaka/ngraph.graph
 
 In case you need to visualize graph in your application you can take a look at some libraries for graph vizualization. 
-There are plenty of them. I'd categorize them into 3 types (for simlicity)
+There are plenty of them. I'd categorize them into 3 types (for simlicity).
+
 Force based: 
 - https://github.com/d3/d3-force
 - https://github.com/anvaka/VivaGraphJS
