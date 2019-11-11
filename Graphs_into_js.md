@@ -1,4 +1,4 @@
-# Graph data structure into for web developers
+# Graph data structure intro for web developers
 
 ## What graph data structure means.
 
