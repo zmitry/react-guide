@@ -6,7 +6,8 @@ In short graph is set of nodes and set of edges which define relations between n
 
 There are several variations of graph datastructure. Multigraphs, directed graphs, undirected graphs, etc. 
 
-Graph representation in code. Graph can be represented using basic data structures in several ways. For production cases implementation might be adjasted to use cases but usually there are 3 way of represenating graph using built in data structures. 
+### Graph representation.
+Graph can be represented using basic data structures in several ways. For production cases implementation might be adjasted to use cases but usually there are 3 way of represenating graph using built in data structures. 
  - Adjacency list
  - Adjacency matrix
  - Edge list 
