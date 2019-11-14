@@ -24,7 +24,7 @@ The main advantage of graph data structure is that it allows you to apply all th
 Useful graph algorithms
 
 - [DSF](https://en.wikipedia.org/wiki/Depth-first_search) and [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) allow you to walk your graph with special order.
-- [Topological soring](https://en.wikipedia.org/wiki/Topological_sorting) allows you to determine if graph is [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) and kind of hierarchical order where from node will always before to node, interesting thing that you might have multiple topological orderings so you might need to choose how to make it deterministic.
+- [Topological sort](https://en.wikipedia.org/wiki/Topological_sorting) allows you to determine if graph is [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) and kind of hierarchical order where from node will always before to node, interesting thing that you might have multiple topological orderings so you might need to choose how to make it deterministic.
 - [Kahn algorithm](https://www.techiedelight.com/kahn-topological-sort-algorithm/] alogrithm for finding topological order)
 - [SCC](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm)- Stronly connected components, allows you to find strong connections in your graph.
 - [A*](https://en.wikipedia.org/wiki/A*_search_algorithm) Intersting algorithm for finding shortest path with heuristics based on caclucating distance between current point and destination point on each step. This is similar to [Dijkstra](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm) but I found it more useful in realworld. 
