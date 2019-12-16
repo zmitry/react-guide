@@ -35,7 +35,7 @@ You can find by links more algorithms, such as network simplex (minimum cost flo
 - https://neo4j.com/developer/graph-algorithms/
 - https://neo4j.com/docs/graph-algorithms/current/
 
-## Useful graph libraires
+## Useful graph libraries
 
 Probably the most common format for graph representation is dot format it allows you to easily express graph and visualize it using graphviz library http://viz-js.com, https://github.com/CyberhavenInc/graphviz-wasm, https://github.com/mdaines/viz.js. With skills that allow you to represent graph visally you can easily debug your code and work on your application logic. As next step it's better to choose some library to manipulate graph datastructure using more abstract methods. I can recommend the following.
 
