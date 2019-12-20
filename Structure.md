@@ -141,6 +141,8 @@ It makes sense for modules. Because every module self containing it describes li
 
 Try to not rely on specific components and controls in your tests and use 'data-testid' for that. You can set data-testid to some button and then during refactoring you will be free to move that button without breaking tests.
 
+Try to move as much logic as you can out of ui to hooks. And test hooks sepearately. This way you can make your tests more reliable and resilent to change. Also this allows you to handle much more edge cases and get better development experience for tests development. Ui testing is fragile by default, but it doesn't mean you shouldn't do it or should do it wrong. No, this means that you spend extra time to implement good ui tests. Because of that separation of view and ligic for view (hooks) is good idea to improve you testing experience.
+
 You tests should fail only if functionality changed but not when you change prop name or replace one component for button with another.
 Test component functionality but not component implementation.
 
