@@ -100,7 +100,7 @@ Modules are domain specific pieces of code. Module can contain everything and ha
 
 2. Modules should not rely on internals of other modules. Module should provide simple api for usage in other modules, e.g. our Alerts module will expose Page with alerts list, components for short list and indication and that's it.
 3. You can have any folder structure within module but prefer flat structure and if this module is quite big use atomic folder structure (see later)
-
+4. Modules dependenices form [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) use can use this too to enforce this policy https://github.com/sverweij/dependency-cruiser
 Atomic structure within modules:
 Each module can have the following structure
 
