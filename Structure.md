@@ -1,4 +1,20 @@
 # Code structure rules and guides
+## Idea
+The idea for this structure relieas on article https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
+
+This structure doesn't forces to use exactly the same folder structure but it shows baseline for good project structure. 
+This appoach improves
+- features testability, 
+- involving new members into the team - you don't need to focus on the whole app you can just focus on sepearate components and don't think about the rest, 
+- it reduces scope of developer attention - when you develop single feature there is rare chance of breaking something else. 
+- Maintain stable complexity path for huge applocations - you don't need to think or even know about other parts of your app if your are focused on single set of features. 
+
+![pic1](https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_top.png)
+
+Every feature/use-case/module is self contained it has several layers of abstructions: models, view, selectors, pages, etc.
+It also depends on your use case but you might have data access (api) as sepearate entity on top of your app or you can have it per feature. Case study shows that it's easier to coodinate data access from single place rather than have it decentralized but it depends on your app. 
+
+The fact that we have all the components files related to concrete feature within single folder it doesn't that we shouldn't have sepearation of concerns. Each feature should have layers of abstractions depending on its complexity but you shouldn't white coupled code just because it's single feature.
 
 ## Project structure
 
