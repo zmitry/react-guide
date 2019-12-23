@@ -1,6 +1,6 @@
 # Code structure rules and guides
-## Idea
-The idea for this structure relieas on article https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
+
+The idea for this structure relies on article https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
 
 This structure doesn't forces to use exactly the same folder structure but it shows baseline for good project structure. 
 This appoach improves
