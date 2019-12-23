@@ -2,23 +2,23 @@
 
 The idea for this structure relies on article https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
 
-This structure doesn't forces to use exactly the same folder structure but it shows baseline for good project structure. 
-This appoach improves
+This structure doesn't force to use exactly the same folder structure but it shows the baseline for good project structure. 
+This approach improves
 - features testability, 
-- involving new members into the team - you don't need to focus on the whole app you can just focus on sepearate components and don't think about the rest, 
-- it reduces scope of developer attention - when you develop single feature there is rare chance of breaking something else. 
-- Maintain stable complexity path for huge applocations - you don't need to think or even know about other parts of your app if your are focused on single set of features. 
+- involving new members into the team - you don't need to focus on the whole app you can just focus on separate components and don't think about the rest, 
+- it reduces the scope of developer attention - when you develop a single feature there is a rare chance of breaking something else. 
+- Maintain a stable complexity path for huge applications - you don't need to think or even know about other parts of your app if you are focused on single set of features. 
 
 ![pic1](https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_top.png)
 
-Every feature/use-case/module is self contained it has several layers of abstructions: models, view, selectors, pages, etc.
-It also depends on your use case but you might have data access (api) as sepearate entity on top of your app or you can have it per feature. Case study shows that it's easier to coodinate data access from single place rather than have it decentralized but it depends on your app. 
+Every feature/use-case/module is self-contained it has several layers of abstractions: models, view, selectors, pages, etc.
+It also depends on your use case but you might have data access (API) as separate entity on top of your app or you can have it per feature. The case study shows that it's easier to coordinate data access from the single place rather than have it decentralized but it depends on your app. 
 
-The fact that we have all the components files related to concrete feature within single folder it doesn't that we shouldn't have sepearation of concerns. Each feature should have layers of abstractions depending on its complexity but you shouldn't white coupled code just because it's single feature.
+The fact that we have all the components files related to concrete feature within a single folder it doesn't that we shouldn't have separation of concerns. Each feature should have layers of abstractions depending on its complexity but you shouldn't white coupled code just because it's a single feature.
 
 ## Project structure
 
-High level project structure.
+High-level project structure.
 
 ```
 api
@@ -89,7 +89,7 @@ in summary u can put code if libs if
 Recommendations:
 
 - Do not try to built the smallest atomic library which can be reused everywhere. This code still specific enough to your project and it's responsible for some functionality of it, so this component should be useable with minimum configuration but it shouldn't be specific to any of our domains.
-- Try to group your functionality. For instance u've built bunch of fancy controls like checkboxes, sliders, number inputs, etc. It will be better to group them together as "form-controls" instead of treating them as separate instances. Another example is charts, you have a lot of neat charts, like barcharts, pies, ars, plots probably all of them are sharing d3 as dependency and built on the same principles, so it's better to group them together either.
+- Try to group your functionality. For instance, you've built a bunch of fancy controls like checkboxes, sliders, number inputs, etc. It will be better to group them together as "form-controls" instead of treating them as separate instances. Another example is charts, you have a lot of neat charts, like bar charts, pies, ars, plots probably all of them are sharing d3 as a dependency and built on the same principles, so it's better to group them together either.
 
 ### modules (aka features)
 
@@ -169,12 +169,12 @@ For libs it's much harder to follow that rule. First of all because you need to 
  Usually you start new features with some name specific for feature or domain you are working on but as your application grows you get more and more code which you want to structure in a proper way with better decomposition. There are a lot of ways to do it, you can do nested features, you can nest you orgnanisms, etc. But all this stuff leads you to bad code structure and bad code discoverability. My recomendations to that is: 
 1) Always search for code which can be moved to libs or components, for instance it can be charts, some complex virtualized lists, some math, data utilities, algorithms. You just can do better decomposition and move some code which isn't related to any domain to libs/components and get free from code overhead in your project. But be careful and don't move code which is tighed to your feature into shared code.
 More examples: this stuff can be something like complex form controls (transfer, selects, suggestions) or general charts (plots, bars, etc).
-2) Another apporoach is to make some parallel feature on the same lvl as main feature for instance
-you have posts and posts gallery component which is quite big and pretty specific to your app, what you can do it's create structure like this
+2) Another approach is to make some parallel feature on the same lvl as the main feature for instance
+you have posts and posts gallery component which is quite big and pretty specific to your app, what you can do it creates a structure like this
 ```
 features/
  - posts
  - posts-gallery
 ```
-As result you have separate feature but at the same time you can see that it's tighted to main feature. Such approach leads to better code discoverability and easier refactoring. If you refactor posts, you probably will check out how posts-gallery works right now and vice verca. 
-One note for these approach that it's better to do lazy import of nested feature.
+As a result, you have a separate feature but at the same time, you can see that it's tightened to the main feature. Such an approach leads to better code discoverability and easier refactoring. If you refactor posts, you probably will check out how posts-gallery works right now and vice-versa. 
+One note for this approach that it's better to do lazy import of nested feature.
