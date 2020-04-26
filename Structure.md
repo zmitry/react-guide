@@ -174,5 +174,5 @@ features/
  - posts
  - posts-gallery
 ```
-As a result, you have a separate feature but at the same time, you can see that it's tightened to the main feature. Such an approach leads to better code discoverability and easier refactoring. If you refactor posts, you probably will check out how posts-gallery works right now and vice-versa. 
+As a result, you have a separate feature but at the same time, you can see that it's tightened to the main feature. Such  approach leads to better code discoverability and easier refactoring. If you refactor posts, you probably will check out how posts-gallery works right now and vice-versa. 
 One note for this approach that it's better to do lazy import of nested feature.
