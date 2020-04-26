@@ -1,9 +1,9 @@
 # Code structure rules and guides
 
-The idea for this structure relies on article https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
+The idea of this structure is ispired by https://martinfowler.com/bliki/PresentationDomainDataLayering.html [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
 
-This structure doesn't force to use exactly the same folder structure but it shows the baseline for good project structure. 
-This approach improves
+This structure doesn't force to use exactly the same folder structure but it shows the baseline for good structure. 
+This approach tries improves
 - features testability, 
 - involving new members into the team - you don't need to focus on the whole app you can just focus on separate components and don't think about the rest, 
 - it reduces the scope of developer attention - when you develop a single feature there is a rare chance of breaking something else. 
@@ -11,10 +11,10 @@ This approach improves
 
 ![pic1](https://martinfowler.com/bliki/images/presentationDomainDataLayering/all_top.png)
 
-Every feature/use-case/module is self-contained it has several layers of abstractions: models, view, selectors, pages, etc.
-It also depends on your use case but you might have data access (API) as separate entity on top of your app or you can have it per feature. The case study shows that it's easier to coordinate data access from the single place rather than have it decentralized but it depends on your app. 
+Every module is self-containedand it has several layers of abstractions: models, view, selectors, pages, etc.
+It also depends on your use case but you might have data access (API) as separate entity at the top of your app or you can have it per module. The case study shows that it's easier to coordinate data access from the single place rather than have it decentralized but it depends on your app. 
 
-The fact that we have all the components files related to concrete feature within a single folder it doesn't that we shouldn't have separation of concerns. Each feature should have layers of abstractions depending on its complexity but you shouldn't white coupled code just because it's a single feature.
+The fact that we have all the components files related to concrete feature within a single folder it doesn't say that we shouldn't use separation of concerns. Each feature should have layers of abstractions depending on its complexity but you shouldn't write coupled code just because it's a single feature.
 
 ## Project structure
 
@@ -68,14 +68,12 @@ Rules of libs.
 2. They should not rely on project specific code, constants, router, etc. Code in lib should rely on external configuration
 3. Code in libs should be well documented and have code coverage 80+
 4. Other modules should not use libs internals without critical need.
-5. Libs should have as less as possible external dependencies
-   for instance it's ok to have emotion/lodash/moment/d3 as dependency but it's better to skip some specific libraries like recharts or react-router, it's better to locate such code in modules.
+5. Libs should have as less as possible external dependencie
    In general, if u can make some functionality to work without dependency or accept it as props, just do it.
-   If u feel that it's crucial to have something as dependency, then use it.
+   If you feel that it's crucial to have something as dependency, then use it.
 6. Libs can have any folder structure but for big features it's better to follow atomic folder structure or split feature.
-   Do not put code in libs if it's very small or very specific to some functionality.
 
-In general libs is a second node_modules folder but with your code or some forked code from other projects.
+In general libs is a second node_modules folder but with your code or some forked code from other github.
 Libs folder is a good place for code like custom visualizations, ui components like slider, checkbox, table. Take in mind that such components should have configurable styling properties.
 guides for designing your components api https://material-ui.com/guides/api/
 
@@ -91,7 +89,7 @@ Recommendations:
 - Do not try to built the smallest atomic library which can be reused everywhere. This code still specific enough to your project and it's responsible for some functionality of it, so this component should be useable with minimum configuration but it shouldn't be specific to any of our domains.
 - Try to group your functionality. For instance, you've built a bunch of fancy controls like checkboxes, sliders, number inputs, etc. It will be better to group them together as "form-controls" instead of treating them as separate instances. Another example is charts, you have a lot of neat charts, like bar charts, pies, ars, plots probably all of them are sharing d3 as a dependency and built on the same principles, so it's better to group them together either.
 
-### modules (aka features)
+### modules
 
 Modules are domain specific pieces of code. Module can contain everything and have any code structure but there are some simple rules and recommendations for them.
 
