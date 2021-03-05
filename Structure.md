@@ -3,7 +3,7 @@
 The idea of this structure is ispired by https://martinfowler.com/bliki/PresentationDomainDataLayering.html, [clean architecture book](https://pdfs.semanticscholar.org/4e0e/958168e6390a26493e2ba599f454de1dfdc2.pdf)
 
 This structure doesn't force to use exactly the same folder structure but it shows the baseline for good structure. 
-This approach tries improves
+This approach tries to improve:
 - features testability, 
 - involving new members into the team - you don't need to focus on the whole app you can just focus on separate components and don't think about the rest, 
 - it reduces the scope of developer attention - when you develop a single feature there is a rare chance of breaking something else. 
